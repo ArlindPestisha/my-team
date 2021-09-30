@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { Logo } from "./../public/Logo";
+import { Logo } from "../public/assets/Logo";
 
 const NavBar = () => {
   return (
-    <nav className="bg-[#014E56] w-4/5 h-12 flex justify-between m-auto">
-      <div className="flex justify-between w-96">
+    <nav className="bg-[#014E56] w-screen h-24 flex justify-between py-7">
+      <div className="flex justify-between w-96 ml-12">
         <Link href="/">
           <a>
             <Logo />
@@ -12,15 +12,19 @@ const NavBar = () => {
         </Link>
 
         <Link href="/">
-          <a>home</a>
+          <a className="py-2 text-white">home</a>
         </Link>
         <Link href="/about">
-          <a>about</a>
+          <a className="py-2 text-white">about</a>
         </Link>
       </div>
 
-      <div>
-        <button>contact us</button>
+      <div className=" mr-20">
+        <Link href="/contact">
+          <button className=" w-40 border-2 text-center h-12 rounded-full text-white">
+            contact us
+          </button>
+        </Link>
       </div>
     </nav>
   );
